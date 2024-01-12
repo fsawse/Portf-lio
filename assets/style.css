@@ -1,0 +1,203 @@
+/*General*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Saira', sans-serif;
+}
+body {
+    background-color: rgb(15, 15, 15);
+    min-height: 100vh;
+}
+.interface {
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
+    min-height: 100vh;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(138,43,226);
+}
+
+/*Bolhas*/
+#top_desktop {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.bolhas {
+    display: flex;
+    position: absolute;
+}
+.bolhas span{
+    width: 30px;
+    height: 30px;
+    background-color: #9370DB;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #9370DB44,
+    0 0 50px #9370DB,
+    0 0 100px #9370DB;
+    animation: animar calc(150s / var(--i)) linear infinite;
+}
+@keyframes animar {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+.bolhas span:nth-of-type(even) {
+    background-color: #8A2BE2;
+    box-shadow: 0 0 0 10px #9370DB44,
+    0 0 50px #8A2BE2,
+    0 0 100px #8A2BE2;
+}
+
+/*Header*/
+header {
+    background-color: rgb(11, 11, 11);
+    box-shadow: rgba(61, 61, 61, 0.25) 0px 4px 4px;
+    padding: 20px 4%;
+}
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    color: #fff;
+}
+header a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+header a::after {
+    content: " ";
+    width: 0%;
+    height: 1px;
+    background-color:rgb(138,43,226);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.4s ease-in-out;
+}
+header a:hover::after {
+    width: 100%;
+}
+header nav ul {
+    list-style-type: none;
+}
+header nav ul li{
+    display: inline-block;
+    padding: 0 30px;
+    font-size: 17px;
+}
+
+/*Main Top*/
+section a{
+    text-decoration: none;
+}
+section#top_desktop {
+    height: 100%;
+}
+section#top_desktop .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+#top_desktop .txt_topside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#top_desktop .txt_topside h1{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 3.7rem;
+}
+#top_desktop .txt_topside p{
+    color: rgb(138,43,226);
+    font-size: 2rem;
+    margin-top: -1.5rem;
+    position: relative;
+    text-shadow:rgb(138,43,226) 0px 0px 10px;
+}
+.btn {
+    display: flex;
+    gap: 10px;
+}
+.btn  svg:hover path{
+    fill: rgb(138,43,226);
+    transition: 0.4s ease-in-out;
+}
+
+
+/*About Me*/
+#aboutme_desktop{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(11, 11, 11);
+    padding-top: 50px;
+    padding-bottom: 200px;
+}
+.title_aboutme h2{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    color: #fff;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+}
+.txt_aboutme p{
+    color: #fff;
+    display: block;
+    padding-top: 30px;
+}
+.txt_aboutme span {
+    color: rgb(138,43,226);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+img {
+    border-radius: 30px;
+    height: 600px;
+    width: 400px;
+}
+
+/*Skills*/
+
+#skill_desktop {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(11, 11, 11);
+    padding-top: 50px;
+    padding-bottom: 200px;
+}
+.skill-box p {
+    padding-bottom: 5px;
+}
+
+/*Footer*/
+#footer_desktop {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(11, 11, 11);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#footer_desktop span {
+    color: #9370DB;
+}
+#footer_desktop p {
+    color: #fff;
+}
