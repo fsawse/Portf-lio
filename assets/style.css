@@ -127,7 +127,7 @@ section#top_desktop .flex{
 #top_desktop .txt_topside p{
     color: rgb(138,43,226);
     font-size: 2rem;
-    margin-top: -2rem;
+    margin-top: -1rem;
     position: relative;
     text-shadow:rgb(138,43,226) 0px 0px 10px;
 }
